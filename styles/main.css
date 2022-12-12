@@ -1,0 +1,492 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: fixed;
+    background-color: white;
+    margin: 0 auto;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.header__menu {
+    display: flex;
+    list-style: none;
+    flex-grow: 1;
+    padding: 0;
+    align-items: center;
+    justify-content: space-evenly;
+
+    max-width: 825px;
+}
+
+.header__logo {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 105%;
+
+    color: #000000;
+}
+
+.header__menu__item {
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 105%;
+}
+
+.header__menu__item > a {
+    color: #050038;
+    text-decoration: none;
+}
+
+.footer {
+    background-color: #050038;
+    text-align: center;
+
+    width: 100%;
+    height: 200px;
+}
+
+.footer__logo {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 105%;
+
+    color: #ffffff;
+
+    padding-top: 30px;
+}
+
+.footer__copyright {
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    color: #ffffff;
+}
+
+main {
+    margin-top: 10vw;
+}
+
+.content {
+    width: 100%;
+
+    max-width: 1320px;
+
+    margin: 0 auto;
+}
+
+.primary-button {
+    background: #0555FF;
+
+    height: fit-content;
+    
+    outline: none;
+    border: none;
+    border-radius: 30px;
+
+    font-family: 'Inter';
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 105%;
+
+    padding: 13px 32px;
+
+    color: #FFFFFF;
+
+    cursor: pointer;
+}
+
+.primary-button:hover {
+    background: #0649db;
+}
+
+.main-title {
+    font-family: 'Inter';
+    font-weight: 900;
+    font-size: 6vw;
+    line-height: 125%;
+
+    text-align: center;
+
+    color: #050038;
+}
+
+.title {
+    font-family: 'Inter';
+    font-weight: 700;
+    font-size: 3vw;
+    line-height: 105%;
+
+    text-align: center;
+
+    color: #050038;
+}
+
+.text {
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 1.5vw;
+    line-height: 160%;
+
+    color: #5B5E6D;
+}
+
+.card {
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+
+    padding: 20px;
+
+    width: 100%;
+    max-width: 420px;
+}
+
+.card__photo {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+
+    margin-right: 10px;
+}
+
+.card__title {
+    font-family: 'Inter';
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    margin: 0;
+
+    color: #050038;
+}
+
+.card__subtitle {
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    margin: 0;
+
+    color: #596068;
+}
+
+.card__header {
+    display: flex;
+    align-items: center;
+}
+
+.card__body {
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 171%;
+
+    color: #050038;
+}
+
+.card__name-panel > * {
+    margin: 0;
+}
+
+.map {
+    display: flex;
+    background: url('../assets/images/map.svg');
+    background-size: 100% auto;
+    width: 650px;
+    height: 680px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.map__marker {
+    width: 47px;
+    height: 47px;
+    background: rgba(5, 85, 255, 0.24);
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.map__marker:hover + .card {
+    display: block;
+}
+
+.map__marker + .card {
+    display: none;
+}
+
+.map__marker::after {
+    width: 27px;
+    height: 27px;
+    background: url('../assets/images/marker.svg');
+    content: '';
+    display: block;
+    position: absolute;
+}
+
+.burger-button {
+    display: none;
+    position: absolute;
+    left: 10px;
+    top: 20px;
+    cursor: pointer;
+}
+
+.line {
+    width: 40px;
+    height: 5px;
+    margin-bottom: 5px;
+    background-color: #000000;
+}
+
+body {
+    margin: 0;
+}
+
+input[type='checkbox'] {
+    display: none;
+}
+
+.button-control {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.button-control__action-button {
+    background: #ffffff;
+
+    height: fit-content;
+    
+    outline: none;
+    border: 1px solid rgb(187, 187, 187);
+    border-radius: 30px;
+
+    font-family: 'Inter';
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 105%;
+
+    padding: 13px 32px;
+
+    color: black;
+
+    cursor: pointer;
+
+    margin-left: 5px;
+}
+
+.active {
+    background-color: #0555FF;
+    color: white;
+}
+
+.loading {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: 999;
+    background-color: #FFFFFF;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    transition: all 0.7s ease-in-out;
+}
+
+.loading__title {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 2vw;
+    line-height: 105%;
+
+    color: #000000;
+}
+
+.loading__progressbar {
+    width: 50px;
+    -webkit-animation: rotating 2s linear infinite;
+    -moz-animation: rotating 2s linear infinite;
+    -ms-animation: rotating 2s linear infinite;
+    -o-animation: rotating 2s linear infinite;
+    animation: rotating 2s linear infinite;
+}
+@keyframes rotating {
+  from {
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 1350px) {
+    .content {
+        width: auto;
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .header {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: #FFFFFF;
+        z-index: 2;
+        margin: 0;
+    }
+
+    .header__menu {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .header__menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        flex-grow: 0;
+    }
+
+    .header__logo {
+        margin: 20px 0 20px 0;
+    }
+
+    .header__menu__item {
+        line-height: 200%;
+    }
+
+    input:checked + .header * {
+        display: flex;
+    }
+
+    input:checked + .header {
+        height: 100vh;
+    }
+
+    .header * {
+        display: none;
+    }
+
+    .header__logo {
+        display: flex;
+        font-size: 26px;
+    }
+
+    .footer__logo {
+        font-size: 26px;
+    }
+
+    .burger-button {
+        display: block;
+        position: fixed;
+        z-index: 10;
+    }
+
+    .title {
+        font-size: 16px;
+    }
+
+    .text {
+        font-size: 12px;
+    }
+
+    .button-control {
+        margin-top: auto;
+        z-index: 1;
+    }
+
+    .button-control__action-button {
+        font-size: 12px;
+        padding: 10px;
+    }
+
+    main {
+        margin-top: 20vw;
+    }
+}
+
+@media (max-width: 750px) {
+    .content {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .map {
+        width: 550px;
+        height: 580px;
+    }
+    .card {
+        /* position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 999; */
+    }
+    .loading__title {
+        font-size: 5vw;
+    }
+}
+
+@media (max-width: 610px) {
+    .content {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .map {
+        width: 300px;
+        height: 310px;
+    }
+
+    .map__element .card {
+        visibility: hidden;
+    }
+}
+
+.landing-field {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 10px;
+    margin-bottom: 60px;
+}
+
+.landing-field * {
+    width: auto;
+}
+
+.dialog {
+    z-index: 999;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    max-width: none;
+    display: none;
+    box-sizing: border-box;
+}
+
+.close {
+    width: fit-content;
+    margin-left: auto;
+}
