@@ -489,4 +489,5 @@ input[type='checkbox'] {
 .close {
     width: fit-content;
     margin-left: auto;
+    font-size: 18px;
 }
