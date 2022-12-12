@@ -141,3 +141,8 @@ function cardExit() {
     const dialog = document.getElementById("dialog");
     dialog.style.display = 'none';
 }
+
+function expandMenu() {
+    const burgerMenu = document.getElementById("burgerMenu");
+    burgerMenu.classList.toggle("burger-expanded");
+}

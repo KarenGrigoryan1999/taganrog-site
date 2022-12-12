@@ -242,6 +242,10 @@ main {
     cursor: pointer;
 }
 
+.burger-button > * {
+    transition: 0.4s all;
+}
+
 .line {
     width: 40px;
     height: 5px;
@@ -433,6 +437,11 @@ input[type='checkbox'] {
         margin-left: 20px;
         margin-right: 20px;
     }
+
+    body > .header {
+        margin: 0;
+    }
+
     .map {
         width: 550px;
         height: 580px;
@@ -500,4 +509,23 @@ input[type='checkbox'] {
     width: fit-content;
     margin-left: auto;
     font-size: 18px;
+}
+
+.burger-expanded {
+    margin-top: 7px;
+}
+
+.burger-expanded > * {
+    display: none;
+}
+
+.burger-expanded > :first-child {
+    transform: rotateZ(45deg);
+    display: block;
+}
+
+.burger-expanded > :last-child {
+    transform: rotateZ(-45deg);
+    display: block;
+    margin-top: -10px;
 }
