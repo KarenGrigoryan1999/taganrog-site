@@ -197,6 +197,7 @@ main {
 .map {
     display: flex;
     background: url('../assets/images/map.svg');
+    background-repeat: no-repeat;
     background-size: 100% auto;
     width: 650px;
     height: 680px;
@@ -456,6 +457,7 @@ input[type='checkbox'] {
     .map {
         width: 300px;
         height: 310px;
+        margin-bottom: 150px;
     }
 
     .map__element .card {
@@ -464,6 +466,10 @@ input[type='checkbox'] {
 
     .dialog {
         border-radius: 0;
+    }
+
+    .button-control {
+        margin-top: 320px;
     }
 }
 
