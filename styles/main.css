@@ -461,6 +461,10 @@ input[type='checkbox'] {
     .map__element .card {
         visibility: hidden;
     }
+
+    .dialog {
+        border-radius: 0;
+    }
 }
 
 .landing-field {
@@ -477,7 +481,7 @@ input[type='checkbox'] {
 .dialog {
     z-index: 999;
     position: fixed;
-    width: 100%;
+    width: 100vw;
     height: 100%;
     top: 0;
     left: 0;
