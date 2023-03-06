@@ -95,6 +95,7 @@ main {
 .header__menu__item > a {
     color: white;
     text-decoration: none;
+    align-items: center;
 }
 
 .submenu {
@@ -119,7 +120,7 @@ main {
     margin-left: 2px;
     display: block;
     width: 40px;
-    height: 21px;
+    height: 20px;
     background: url('../assets/images/arrow.png');
 }
 
@@ -474,6 +475,46 @@ input[type='checkbox'] {
     padding-top: 74px;
 }
 
+.project {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    margin-bottom: 80px;
+}
+
+.project__left {
+    background-color: #fff;
+}
+
+.project__right {
+    background-color: #CCE6FF;
+    padding-left: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 300px;
+}
+
+.project__right > * {
+    max-width: 90%;
+}
+
+.project__number {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 80px;
+    line-height: 140%;
+    color: #1B66A8;
+}
+
+.project__number > p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 133%;
+    color: #909090;
+}
+
 @keyframes rotating {
   from {
     -webkit-transform: rotate(0deg);
@@ -537,6 +578,11 @@ input[type='checkbox'] {
         background: #0D2336;
     }
 
+    .submenu {
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
     .header > ul > li > .submenu {
         position: static;
         display: none;
@@ -548,6 +594,9 @@ input[type='checkbox'] {
 
     .menu-arrow {
         display: block;
+        background: url('../assets/images/submenu_arrow.svg');
+        width: 10px;
+        height: 10px;
     }
 
     .submenu > ul {

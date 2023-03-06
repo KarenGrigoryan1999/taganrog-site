@@ -8,9 +8,9 @@ function expandSubMenu(e) {
     console.log(e.target.childNodes[0]);
     if(e.target.nextElementSibling.style.getPropertyValue('display') === 'block') {
         e.target.nextElementSibling.style.setProperty('display', 'none');
-        e.target.childNodes[0].innerText = '∨';
+        e.target.childNodes[0].style.transform = 'rotate(0deg)';
     } else {
         e.target.nextElementSibling.style.setProperty('display', 'block');
-        e.target.childNodes[0].innerText = '∧';
+        e.target.childNodes[0].style.transform = 'rotate(180deg)';
     }
 }

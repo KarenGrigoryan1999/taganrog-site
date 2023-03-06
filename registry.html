@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="http://fonts.cdnfonts.com/css/circular-std" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="./styles/main.css">
+    <script src="https://unpkg.com/vue@3.1.1/dist/vue.global.prod.js"></script>
+    <title>Таганрог - Инвестиционный паспорт</title>
+</head>
+
+<body>
+    <input id="menu-burger" type="checkbox" />
+    <header class="header header-scroll">
+        <p class="header__logo">
+            <img class="header__logo-picture" src="./assets/images/tgn-logo.png" />
+            Таганрог
+        </p>
+        <ul class="header__menu">
+            <li class="header__menu__item">
+                <a href="./index.html">Главная</a>
+            </li>
+            <li class="header__menu__item">
+                <a href="" onclick="expandSubMenu(event)"><div class="menu-arrow"></div>Инвесторам</a>
+                <div class="submenu">
+                    <ul>
+                        <li class="header__submenu__item">
+                            <a href="./map.html">Инвестиционная карта</a>
+                        </li>
+                        <li class="header__submenu__item">
+                            <a href="./passport.html">Инвестиционный паспорт</a>
+                        </li>
+                        <li class="header__submenu__item">
+                            <a href="./projects.html">Проекты</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="header__menu__item">
+                <a href="" onclick="expandSubMenu(event)"><div class="menu-arrow"></div>Бизнесу</a>
+                <div class="submenu">
+                    <ul>
+                        <li class="header__submenu__item">
+                            <a href="">Промышленные предприятия таганрога</a>
+                        </li>
+                        <li class="header__submenu__item">
+                            <a href="">Поддержка МСП</a>
+                        </li>
+                        <li class="header__submenu__item">
+                            <a href="">ГЧП</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="header__menu__item">
+                <a href="">Реестр инвестиционных площадок</a>
+            </li>
+        </ul>
+    </header>
+    <label for="menu-burger">
+        <div class="burger-button" id="burgerMenu" onclick="expandMenu()">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </label>
+    <main>
+        <div class="content">
+        <h1 class="primary-title">Реестр инвестиционных площадок</h1>
+        <h1 class="primary-subtitle">Муниципальная инвестиционная площадка № 61:58:0005283:109</h1>
+        <div class="project">
+            <div class="project__left">
+                <div class="project__number">
+                    9
+                    <p>Расстояние до цента км</p>
+                </div>
+                <div class="project__number">
+                    18470
+                    <p>Площадь кв.м.</p>
+                </div>
+            </div>
+            <div class="project__right">
+                <h1 class="primary-subtitle">Поляковское шоссе, 50-21</h1>
+                <p class="text">Для сельскохозяйственного производства - справа
+                </p>
+            </div>
+        </div>
+        <h1 class="primary-subtitle">Муниципальная инвестиционная площадка № 61:58:0000000:45471</h1>
+        <div class="project">
+            <div class="project__left">
+                <div class="project__number">
+                    8
+                    <p>Расстояние до цента км</p>
+                </div>
+                <div class="project__number">
+                    258555
+                    <p>Площадь кв.м.</p>
+                </div>
+            </div>
+            <div class="project__right">
+                <h1 class="primary-subtitle">Николаевское шоссе, 19</h1>
+                <p class="text">Для иных видов использования, характерных для населённых пунктов
+                </p>
+            </div>
+        </div>
+        <h1 class="primary-subtitle">Инвестиционная площадка АО "Таганрогский завод "Прибой" (61:58:0002515:103)</h1>
+        <div class="project">
+            <div class="project__left">
+                <div class="project__number">
+                    5
+                    <p>Расстояние до цента км</p>
+                </div>
+                <div class="project__number">
+                    7022
+                    <p>Площадь кв.м.</p>
+                </div>
+            </div>
+            <div class="project__right">
+                <h1 class="primary-subtitle">ул. Большая бульварная, 13-1</h1>
+                <p class="text">Для размещения объектов, характерных для населённых пунктов</p>
+            </div>
+        </div>
+        <h1 class="primary-subtitle">Инвестиционная площадка ПАО ТКЗ "Красный котельщик" (61:58:0000000:47640)</h1>
+        <div class="project">
+            <div class="project__left">
+                <div class="project__number">
+                    3
+                    <p>Расстояние до цента км</p>
+                </div>
+                <div class="project__number">
+                    506845
+                    <p>Площадь кв.м.</p>
+                </div>
+            </div>
+            <div class="project__right">
+                <h1 class="primary-subtitle">ул. Ленина, 220</h1>
+                <p class="text">Для размещения производственных зданий</p>
+            </div>
+        </div>
+        <h1 class="primary-subtitle">Инвестиционная площадка ООО "Альянс" (61:58:0002500:687)</h1>
+        <div class="project">
+            <div class="project__left">
+                <div class="project__number">
+                    4
+                    <p>Расстояние до цента км</p>
+                </div>
+                <div class="project__number">
+                    14738
+                    <p>Площадь кв.м.</p>
+                </div>
+            </div>
+            <div class="project__right">
+                <h1 class="primary-subtitle">ул. Инструментальная, 2-10, 2-29</h1>
+                <p class="text">Для размещения административных зданий</p>
+            </div>
+        </div>
+        <h1 class="primary-subtitle">Инвестиционная площадка ООО "УК ИнвестДевелопмент" (61:58:0002500:65)</h1>
+        <div class="project">
+            <div class="project__left">
+                <div class="project__number">
+                    4
+                    <p>Расстояние до цента км</p>
+                </div>
+                <div class="project__number">
+                    6239
+                    <p>Площадь кв.м.</p>
+                </div>
+            </div>
+            <div class="project__right">
+                <h1 class="primary-subtitle">ул. Инструментальная, 2-3</h1>
+                <p class="text">Для размещения административно-производственного здания</p>
+            </div>
+        </div>
+    </div>
+        <script src="./js/menu.js"></script>
+    </main>
+    <footer class="footer">
+        <div class="content">
+            <p class="footer__logo">GB Maps</p>
+            <p class="footer__copyright">&copy; 2022 г. Все права принадлежат Леську-Караську</p>
+        </div>
+    </footer>
+</body>
+</html>
