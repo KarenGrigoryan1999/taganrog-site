@@ -12,29 +12,58 @@
     <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="./styles/main.css">
     <script src="https://unpkg.com/vue@3.1.1/dist/vue.global.prod.js"></script>
-    <title>Сайт Олеси</title>
+    <title>Таганрог - Главная</title>
 </head>
 
 <body>
     <div id="loader" class="loading">
-        <p class="loading__title">GB Maps</p>
+        <p class="loading__title">Таганрог</p>
         <img class="loading__progressbar" src="./assets/images/loader.png" />
     </div>
     <input id="menu-burger" type="checkbox" />
-    <header class="header content">
-        <p class="header__logo">GB Maps</p>
+    <header class="header">
+        <p class="header__logo">
+            <img class="header__logo-picture" src="./assets/images/tgn-logo.png" />
+            Таганрог
+        </p>
         <ul class="header__menu">
             <li class="header__menu__item">
-                <a href="">Главная</a>
+                <a href="./index.html">Главная</a>
             </li>
             <li class="header__menu__item">
-                <a href="">Инвесторам</a>
+                <a href="" onclick="expandSubMenu(event)"><p class="menu-arrow">∨</p>Инвесторам</a>
+                <div class="submenu">
+                    <ul>
+                        <li class="header__submenu__item">
+                            <a href="./map.html">Инвестиционная карта</a>
+                        </li>
+                        <li class="header__submenu__item">
+                            <a href="./passport.html">Инвестиционный паспорт</a>
+                        </li>
+                        <li class="header__submenu__item">
+                            <a href="./projects.html">Проекты</a>
+                        </li>
+                    </ul>
+                </div>
             </li>
             <li class="header__menu__item">
-                <a href="">Бизнесу</a>
+                <a href="" onclick="expandSubMenu(event)"><p class="menu-arrow">∨</p>Бизнесу</a>
+                <div class="submenu">
+                    <ul>
+                        <li class="header__submenu__item">
+                            <a href="">Промышленные предприятия таганрога</a>
+                        </li>
+                        <li class="header__submenu__item">
+                            <a href="">Поддержка МСП</a>
+                        </li>
+                        <li class="header__submenu__item">
+                            <a href="">ГЧП</a>
+                        </li>
+                    </ul>
+                </div>
             </li>
             <li class="header__menu__item">
-                <a href="">Реестр инвестиционнах площадок</a>
+                <a href="">Реестр инвестиционных площадок</a>
             </li>
         </ul>
     </header>
@@ -45,100 +74,47 @@
             <div class="line"></div>
         </div>
     </label>
-    <main>
+    <main class="landing-main">
+        <div class="info-panel">
+            <h1 class="main-title">Стань инвестором и развивай индустрию города Таганрога!</h1>
+            <h1 class="title">Или пожалеешь!</h1>
+        </div>
         <div class="content">
-            <div class="info-panel">
-                <h1 class="main-title">Инвестиционная карта города Таганрога</h1>
-                <h1 class="title">Стань инвестором и развивай индустрию города Таганрога!</h1>
-                <div class="landing-field">
-                    <div class="card">
-                        <div class="card__header">
-                            <div class="card__name">
-                                <h1 class="card__title">Объём инвестиций в основной капитал в 2022 г.</h1>
-                                <p class="card__subtitle">20,1 млн. руб</p>
-                            </div>
+            <h1 class="primary-title">Ради Бога, вложите деньги в Таганрог!</h1>
+            <div class="landing-field">
+                <div class="card">
+                    <div class="card__header">
+                        <div class="card__name">
+                            <h1 class="card__title">Объём инвестиций в основной капитал в 2022 г.</h1>
+                            <p class="card__subtitle">20,1 млн. руб</p>
                         </div>
                     </div>
-                    <div class="card">
-                        <div class="card__header">
-                            <div class="card__name">
-                                <h1 class="card__title">Отгружено товаров собственного производства, выполнено работ, услуг собственными силами в 2022 г.</h1>
-                                <p class="card__subtitle">344,1 млн. руб</p>
-                            </div>
+                </div>
+                <div class="card">
+                    <div class="card__header">
+                        <div class="card__name">
+                            <h1 class="card__title">Отгружено товаров собственного производства, выполнено работ, услуг собственными силами в 2022 г.</h1>
+                            <p class="card__subtitle">344,1 млн. руб</p>
                         </div>
                     </div>
-                    <div class="card">
-                        <div class="card__header">
-                            <div class="card__name">
-                                <h1 class="card__title">Прибыль крупных и средних предприятий в 2022 году</h1>
-                                <p class="card__subtitle">2495,6 млн. руб</p>
-                            </div>
+                </div>
+                <div class="card">
+                    <div class="card__header">
+                        <div class="card__name">
+                            <h1 class="card__title">Прибыль крупных и средних предприятий в 2022 году</h1>
+                            <p class="card__subtitle">2495,6 млн. руб</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div id="map" class="map">
-                <div class="button-control">
-                    <button
-                        class="button-control__action-button"
-                        @mousedown="selectGroup($event)"
-                        @click="hide(mark)"
-                        v-for="mark in marksArray"
-                    >
-                        {{mark.groupTitle}}
-                    </button>
-                    <button
-                        class="button-control__action-button active"
-                        @mousedown="selectGroup($event)"
-                        @click="hide()"
-                    >
-                        Всё
-                    </button>
-                </div>
-                <template v-for="markGroup in marksArray">
-                <div v-for="mark in markGroup.marks" v-if="markGroup.isVisible" @click="showPlaceInfo(mark)">
-                    <div
-                        class="map__element"
-                        :style="{ 'position': 'absolute', 'top': mark.top + '%', 'left': mark.left + '%' }"
-                    >
-                        <div class="map__marker"></div>
-                        <div class="card">
-                            <div class="card__header">
-                                <img class="card__photo" :src="mark.photo" />
-                                <div class="card__name">
-                                    <h1 class="card__title">{{mark.title}}</h1>
-                                    <p class="card__subtitle">{{mark.subscription}}</p>
-                                </div>
-                            </div>
-                            <div class="card__body">
-                                <p>
-                                    {{mark.text}}
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </template>
-            </div>
+            <h1 class="primary-title">Привет мир</h1>
+            <h1 class="primary-subtitle">Привет мир</h1>
+            <p class="text-line">Просто текст</p>
+            <button class="primary-button">клик</button>
+            <script src="./js/menu.js"></script>
             <script src="./js/index.js"></script>
         </div>
     </main>
-    <div class="card dialog" id="dialog">
-        <p class="close" onclick="cardExit()">⨉</p>
-        <div class="card__header">
-            <div class="card__header">
-                <div class="card__name">
-                    <h1 class="card__title" id="dialog-title">заголовок</h1>
-                    <p class="card__subtitle" id="dialog-subscription">описание</p>
-                </div>
-            </div>
-        </div>
-        <div class="card__body">
-            <p id="dialog-text">
-                текст
-            </p>
-        </div>
-    </div>
     <footer class="footer">
         <div class="content">
             <p class="footer__logo">GB Maps</p>

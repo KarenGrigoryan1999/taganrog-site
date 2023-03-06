@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="http://fonts.cdnfonts.com/css/circular-std" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="./styles/main.css">
+    <script src="https://unpkg.com/vue@3.1.1/dist/vue.global.prod.js"></script>
+    <title>Таганрог - Инвестиционная карта</title>
+</head>
+
+<body>
+    <input id="menu-burger" type="checkbox" />
+<header class="header header-scroll">
+        <p class="header__logo">
+            <img class="header__logo-picture" src="./assets/images/tgn-logo.png" />
+            Таганрог
+        </p>
+        <ul class="header__menu">
+            <li class="header__menu__item">
+                <a href="./index.html">Главная</a>
+            </li>
+            <li class="header__menu__item">
+                <a href="" onclick="expandSubMenu(event)"><p class="menu-arrow">∨</p>Инвесторам</a>
+                <div class="submenu">
+                    <ul>
+                        <li class="header__submenu__item">
+                            <a href="./map.html">Инвестиционная карта</a>
+                        </li>
+                        <li class="header__submenu__item">
+                            <a href="./passport.html">Инвестиционный паспорт</a>
+                        </li>
+                        <li class="header__submenu__item">
+                            <a href="./projects.html">Проекты</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="header__menu__item">
+                <a href="" onclick="expandSubMenu(event)"><p class="menu-arrow">∨</p>Бизнесу</a>
+                <div class="submenu">
+                    <ul>
+                        <li class="header__submenu__item">
+                            <a href="">Промышленные предприятия таганрога</a>
+                        </li>
+                        <li class="header__submenu__item">
+                            <a href="">Поддержка МСП</a>
+                        </li>
+                        <li class="header__submenu__item">
+                            <a href="">ГЧП</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="header__menu__item">
+                <a href="">Реестр инвестиционных площадок</a>
+            </li>
+        </ul>
+    </header>
+    <label for="menu-burger">
+        <div class="burger-button" id="burgerMenu" onclick="expandMenu()">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </label>
+    <main>
+        <div class="content">
+            <h1 class="primary-title">Инвестиционная карта Таганрога</h1>
+            <div id="map" class="map">
+                <div class="button-control">
+                    <button
+                        class="button-control__action-button"
+                        @mousedown="selectGroup($event)"
+                        @click="hide(mark)"
+                        v-for="mark in marksArray"
+                    >
+                        {{mark.groupTitle}}
+                    </button>
+                    <button
+                        class="button-control__action-button active"
+                        @mousedown="selectGroup($event)"
+                        @click="hide()"
+                    >
+                        Всё
+                    </button>
+                </div>
+                <template v-for="markGroup in marksArray">
+                <div v-for="mark in markGroup.marks" v-if="markGroup.isVisible" @click="showPlaceInfo(mark)">
+                    <div
+                        class="map__element"
+                        :style="{ 'position': 'absolute', 'top': mark.top + '%', 'left': mark.left + '%' }"
+                    >
+                        <div class="map__marker"></div>
+                        <div class="card">
+                            <div class="card__header">
+                                <img class="card__photo" :src="mark.photo" />
+                                <div class="card__name">
+                                    <h1 class="card__title">{{mark.title}}</h1>
+                                    <p class="card__subtitle">{{mark.subscription}}</p>
+                                </div>
+                            </div>
+                            <div class="card__body">
+                                <p>
+                                    {{mark.text}}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </template>
+            </div>
+            <script src="./js/menu.js"></script>
+            <script src="./js/map.js"></script>
+        </div>
+    </main>
+    <div class="card dialog" id="dialog">
+        <p class="close" onclick="cardExit()">⨉</p>
+        <div class="card__header">
+            <div class="card__header">
+                <div class="card__name">
+                    <h1 class="card__title" id="dialog-title">заголовок</h1>
+                    <p class="card__subtitle" id="dialog-subscription">описание</p>
+                </div>
+            </div>
+        </div>
+        <div class="card__body">
+            <p id="dialog-text">
+                текст
+            </p>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="content">
+            <p class="footer__logo">GB Maps</p>
+            <p class="footer__copyright">&copy; 2022 г. Все права принадлежат Леську-Караську</p>
+        </div>
+    </footer>
+</body>
+</html>
