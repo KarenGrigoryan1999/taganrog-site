@@ -515,6 +515,41 @@ input[type='checkbox'] {
     color: #909090;
 }
 
+.invest-field {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    margin-bottom: 20px;
+}
+
+.invest-field__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #2D74B3;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.invest-field__left > * {
+    font-family: 'Inter';
+    color: white;
+}
+
+.invest-field__left > h2 {
+    font-weight: 100;
+}
+
+.invest-field__right {
+    background-color: #2D74B3;
+    width: 100%;
+    height: 100%;
+    filter: contrast(0.5);
+}
+
+.project-page {
+    margin-top: 40px;
+}
+
 @keyframes rotating {
   from {
     -webkit-transform: rotate(0deg);
