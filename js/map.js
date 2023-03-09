@@ -2,6 +2,7 @@ const { ref, createApp, watch } = Vue
 createApp({
     setup() {
         const firstGroup = ref({
+            id: 1,
             groupTitle: 'Земельные участки',
             isVisible: true,
             marks: [
@@ -25,6 +26,7 @@ createApp({
         });
 
         const secondGroup = ref({
+            id: 2,
             groupTitle: 'Инвестиционные объекты',
             isVisible: true,
             marks: [
@@ -48,6 +50,7 @@ createApp({
         });
 
         const thirdGroup = ref({
+            id: 3,
             groupTitle: 'Промпарки',
             isVisible: true,
             marks: [
@@ -70,23 +73,11 @@ createApp({
             ]
         });
 
+        const groupNumber = ref(0);
+
         const hide = (data) => {
-            const groups = [
-                firstGroup.value,
-                secondGroup.value,
-                thirdGroup.value
-            ];
-
-            groups.forEach((element) => {
-                element.isVisible = data ? false : true;
-            });
-            if (data) {
-                data.isVisible = true;
-            }
-
-            marksArray.value = [
-                ...groups
-            ];
+            console.log(groupNumber.value, data);
+            groupNumber.value = data;
         }
 
         const selectGroup = (event) => {
@@ -110,15 +101,13 @@ createApp({
             
         }
 
-        const marksArray = ref([]);
-
         hide();
 
         return {
-            marksArray,
             hide,
             selectGroup,
-            showPlaceInfo
+            showPlaceInfo,
+            groupNumber
         }
     }
 }).mount('#map')

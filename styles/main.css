@@ -333,12 +333,11 @@ main {
 
 .map {
     display: flex;
-    background: url('../assets/images/map.png');
+    flex-direction: column;
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
     width: 950px;
-    height: 880px;
     position: relative;
     margin: 0 auto;
 }
@@ -404,6 +403,7 @@ input[type='checkbox'] {
     justify-content: center;
     flex-wrap: wrap;
     width: 100%;
+    height: fit-content;
 }
 
 .button-control__action-button {
@@ -426,6 +426,10 @@ input[type='checkbox'] {
     cursor: pointer;
 
     margin-left: 4px;
+}
+
+.maps-container {
+    width: 100%;
 }
 
 .active {
@@ -577,8 +581,7 @@ input[type='checkbox'] {
     }
 
     .map {
-        width: 850px;
-        height: 780px;
+        width: 100%;
     }
 
     .card__title {
@@ -646,8 +649,7 @@ input[type='checkbox'] {
     }
 
     .map {
-        width: 550px;
-        height: 380px;
+        width: 100%;
     }
 
     .header__menu {
@@ -709,7 +711,6 @@ input[type='checkbox'] {
     }
 
     .button-control {
-        margin-top: auto;
         z-index: 1;
     }
 
@@ -734,8 +735,7 @@ input[type='checkbox'] {
     }
 
     .map {
-        width: 550px;
-        height: 580px;
+        width: 100%;
     }
     .card {
         /* position: fixed;
@@ -764,22 +764,12 @@ input[type='checkbox'] {
         margin-right: 10px;
     }
 
-    .map {
-        width: 280px;
-        height: 310px;
-        margin-bottom: 150px;
-    }
-
     .map__element .card {
         visibility: hidden;
     }
 
     .dialog {
         border-radius: 0;
-    }
-
-    .button-control {
-        margin-top: 300px;
     }
 }
 
