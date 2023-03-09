@@ -114,7 +114,7 @@
                     <div v-show="groupNumber === 3">
                         <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A415d08954f7b624618d290131ca51a10bc92c819780916c37f99cc2eafcb9ef9&amp;source=constructor" width="100%" height="400" frameborder="0"></iframe>
                     </div>
-                    <div v-show="groupNumber === 0">
+                    <div v-show="groupNumber === 0 || groupNumber === undefined">
                         <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A0e8b377e18ab99caa5bed7756a073e03a12bf262de28fd905e67d61b9018fc3b&amp;source=constructor" width="100%" height="400" frameborder="0"></iframe>
                     </div>
                 </div>
