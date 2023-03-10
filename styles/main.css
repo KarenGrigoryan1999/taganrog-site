@@ -532,6 +532,8 @@ input[type='checkbox'] {
     background-color: #2D74B3;
     padding-left: 20px;
     padding-right: 20px;
+    background-position: center;
+    background-size: cover;
 }
 
 .invest-field__left > * {
