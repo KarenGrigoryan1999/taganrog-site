@@ -2,6 +2,10 @@ html, body {
     height: 100%;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 .header {
     display: flex;
     justify-content: space-between;
@@ -532,8 +536,6 @@ input[type='checkbox'] {
     background-color: #2D74B3;
     padding-left: 20px;
     padding-right: 20px;
-    background-position: center;
-    background-size: cover;
 }
 
 .invest-field__left > * {
