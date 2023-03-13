@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="http://fonts.cdnfonts.com/css/circular-std" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="./styles/main.css">
+    <script src="https://unpkg.com/vue@3.1.1/dist/vue.global.prod.js"></script>
+    <title>Таганрог - Инвестиционный паспорт</title>
+</head>
+
+<body>
+    <input id="menu-burger" type="checkbox" />
+    <header class="header header-scroll">
+        <p class="header__logo">
+            <img class="header__logo-picture" src="./assets/images/tgn-logo.png" />
+            Таганрог
+        </p>
+        <ul class="header__menu">
+            <li class="header__menu__item">
+                <a href="./index.html">Главная</a>
+            </li>
+            <li class="header__menu__item">
+                <a href="" onclick="expandSubMenu(event)"><div class="menu-arrow"></div>Инвесторам</a>
+                <div class="submenu">
+                    <ul>
+                        <li class="header__submenu__item">
+                            <a href="./map.html">Инвестиционная карта</a>
+                        </li>
+                        <li class="header__submenu__item">
+                            <a href="./passport.html">Инвестиционный паспорт</a>
+                        </li>
+                        <li class="header__submenu__item">
+                            <a href="./projects.html">Проекты</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="header__menu__item">
+                <a href="" onclick="expandSubMenu(event)"><div class="menu-arrow"></div>Бизнесу</a>
+                <div class="submenu">
+                    <ul>
+                        <li class="header__submenu__item">
+                            <a href="./prom.html">Промышленные предприятия таганрога</a>
+                        </li>
+                        <li class="header__submenu__item">
+                            <a href="./support.html">Поддержка МСП</a>
+                        </li>
+                        <li class="header__submenu__item">
+                            <a href="./business.html">ГЧП</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="header__menu__item">
+                <a href="./registry.html">Реестр инвестиционных площадок</a>
+            </li>
+        </ul>
+    </header>
+    <label for="menu-burger">
+        <div class="burger-button" id="burgerMenu" onclick="expandMenu()">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </label>
+    <main>
+        <div class="content">
+            <h1 class="primary-title">Промышленные предприятия Таганрога</h1>
+            <p class="text">
+                Таганрог называют важным промышленным центром юга страны. Определяющую роль в промышленности города играют обрабатывающие производства.
+                Также развита химическая отрасль. В городе находятся крупные предприятия машиностроения и металлообработки: металлургический, литейный и
+                котельный заводы. Также в городе расположен авиационный ремонтный завод, осуществляющий ремонт самолетов и их комплектующих.
+            </p>
+            <div class="prom">
+                <img src="https://xn--80aegj1b5e.xn--p1ai/factory-files/styles/140n/public/image/logo/logo-894_0.jpg?itok=qLvOkcOE"/>
+                <div class="prom__left-panel">
+                    <h1>ТАГМЕТ</h1>
+                    <p class="text">ПАО «ТАГМЕТ» выпускает практически все виды стальных труб, в том числе высокопрочные со специальными свойствами, коррозионностойкие, трубы с высокогерметичными резьбовыми соединениями, бесшовные горячедеформированные, бурильные трубы с приварными замками, обсадные трубы и муфты к ним, трубы для ремонта скважин, сварные стальные круглые и профильные трубы, водогазопроводные трубы, оцинкованные трубы.</p>
+                </div>
+            </div>
+            <div class="prom">
+                <img src="https://xn--80aegj1b5e.xn--p1ai/factory-files/styles/140n/public/image/logo/logo-895_0.jpg?itok=QHo9UjJI"/>
+                <div class="prom__left-panel">
+                    <h1>ТКЗ Красный котельщик</h1>
+                    <p class="text">ОАО «Таганрогский котлостроительный завод «Красный котельщик» (входит в состав ООО «НордЭнергоГрупп») – одна из ведущих компаний отечественного котлостроения, имеющая международный опыт и компетенции в области проектирования, изготовления и комплексной поставки оборудования для тепловой энергетики, включая исполнение контрактов под ключ.</p>
+                </div>
+            </div>
+            <div class="prom">
+                <img src="https://xn--80aegj1b5e.xn--p1ai/factory-files/styles/140n/public/image/logo/logo-896_0.jpg?itok=BNrJhVn6"/>
+                <div class="prom__left-panel">
+                    <h1>Таганрогский завод Прибой</h1>
+                    <p class="text">АО "Таганрогский завод "Прибой" - предприятие приборостроительной промышленности, специализирующееся, главным образом на разработке и серийном изготовлении гидроакустического вооружения для ВМФ.</p>
+                </div>
+            </div>
+            <div class="prom">
+                <img src="https://xn--80aegj1b5e.xn--p1ai/factory-files/styles/140n/public/image/logo/logo-897_0.jpg?itok=ujgDy3xv"/>
+                <div class="prom__left-panel">
+                    <h1>ТЛЗ</h1>
+                    <p class="text">ООО «Таганрогский литейный завод» осуществляет выпуск литейной продукции в первую очередь для нужд российских и потребителей. Заказчиками ООО «ТЛЗ» являются крупные российские компании, выпускающие продукцию для нужд ОАО «Российские железные дороги»: рельсовые крепления, анкеры и т.п., используемые на высокоскоростных магистралях.</p>
+                </div>
+            </div>
+            <div class="prom">
+                <img src="https://xn--80aegj1b5e.xn--p1ai/factory-files/styles/140n/public/image/logo/logo-898_0.jpg?itok=Neo1VT8H"/>
+                <div class="prom__left-panel">
+                    <h1>325 АРЗ</h1>
+                    <p class="text">ОАО «325 Авиационный ремонтный завод» осуществляет капитальный ремонт самолетов АН, воздушного винта. Продукцию завода приобретают военная и гражданская авиация.</p>
+                </div>
+            </div>
+            <div class="prom">
+                <img src="https://xn--80aegj1b5e.xn--p1ai/factory-files/styles/140n/public/image/logo/logo-894_0.jpg?itok=qLvOkcOE"/>
+                <div class="prom__left-panel">
+                    <h1>Ориентал Групп</h1>
+                    <p class="text">ООО «Ориентал Групп» - разработчик и производитель полимерных компаундов «ICEPLAST» для изделий из пластмасс.</p>
+                </div>
+            </div>
+            <div class="prom">
+                <img src="https://xn--80aegj1b5e.xn--p1ai/factory-files/styles/140n/public/image/logo/new-logo-144_0.jpg?itok=9EterrLz"/>
+                <div class="prom__left-panel">
+                    <h1>ПТЦ</h1>
+                    <p class="text">Компания ООО «Приазовский технический центр» является одним из ведущих производителей грузоподъемного оборудования – мостовые краны общего и специального назначения, козловые краны, кран-балки, грузовые тележки, кабины управления, траверсы и т.д., а также производит разработку и внедрение экономичных и эффективных программ по капитальному ремонту и модернизации всех типов и модификаций грузоподъемных машин с заменой несущих элементов металлоконструкций, механического и электрического оборудования, кабин управления, грузовых тележек, систем радиоуправления и частотного регулирования, систем ограничения грузоподъемности и весового контроля и т.д.</p>
+                </div>
+            </div>
+            <div class="prom">
+                <img src="https://xn--80aegj1b5e.xn--p1ai/factory-files/styles/140n/public/image/logo/new-logo-145_0.jpg?itok=HL1xMtNW"/>
+                <div class="prom__left-panel">
+                    <h1>Санполимер</h1>
+                    <p class="text">Завод САНПОЛИМЕР - Российский производитель полипропиленовых труб и фитингов, труб для систем внутренней и наружной канализации, труб для тёплого пола и системы капельного полива.</p>
+                </div>
+            </div>
+            <div class="prom">
+                <img src="https://xn--80aegj1b5e.xn--p1ai/factory-files/styles/140n/public/image/logo/logo1519_0.png?itok=AQiHf-nY"/>
+                <div class="prom__left-panel">
+                    <h1>ТКФ</h1>
+                    <p class="text">Таганрогская кондитерская фабрика (ТКФ) предлагает своим потребителям товар зефирно-пастильной группы, мармелад, вафли, драже, песочное отсадное и сахарное печенье, качество которых отвечает самым высоким требованиям.</p>
+                </div>
+            </div>
+            <div class="prom">
+                <img src="https://xn--80aegj1b5e.xn--p1ai/factory-files/styles/140n/public/image/logo/logo3222_0.jpg?itok=2QGydQt8"/>
+                <div class="prom__left-panel">
+                    <h1>Черноиванов и Ко</h1>
+                    <p class="text">КТ “Черноиванов и Компания Таганрогский Механический Завод” занимает лидирующие позиции среди российских производителей бытового отопительного и газоспользующего оборудования.</p>
+                </div>
+            </div>
+        </div>
+        <script src="./js/menu.js"></script>
+    </main>
+    <footer class="footer">
+        <div class="content">
+            <p class="footer__logo">Таганрог</p>
+            <p class="footer__copyright">&copy; 2023 г. Все права защищены</p>
+        </div>
+    </footer>
+</body>
+</html>
