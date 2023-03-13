@@ -229,6 +229,10 @@ main {
     margin-bottom: 10px;
 }
 
+.without-line::before {
+    display: none;
+}
+
 .primary-subtitle {
     font-family: 'Inter';
     font-weight: 900;
@@ -487,6 +491,15 @@ input[type='checkbox'] {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     margin-bottom: 80px;
+}
+
+.underline::before {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 10px;
+    background-color: #2D74B3;
+    margin-bottom: 10px;
 }
 
 .project__left {
