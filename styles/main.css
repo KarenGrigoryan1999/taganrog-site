@@ -197,7 +197,7 @@ main {
 .main-title {
     font-family: 'Inter';
     font-weight: 900;
-    font-size: 4vw;
+    font-size: 3vw;
     line-height: 125%;
 
     text-align: center;
@@ -569,6 +569,7 @@ input[type='checkbox'] {
 
 .project-page {
     margin-top: 40px;
+    font-size: 28px;
 }
 
 .prom {
@@ -822,7 +823,6 @@ input[type='checkbox'] {
 
     .main-title {
         font-size: 24px;
-        margin-top: 100px;
     }
 
     .content {
