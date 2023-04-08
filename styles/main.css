@@ -314,7 +314,7 @@ main {
 .card__subtitle {
     font-family: 'Inter';
     font-weight: 400;
-    font-size: 16px;
+    font-size: 28px;
     line-height: 150%;
     margin: 0;
 
@@ -516,7 +516,7 @@ input[type='checkbox'] {
 }
 
 .project__right > * {
-    max-width: 90%;
+    max-width: 70%;
 }
 
 .project__number {
@@ -592,6 +592,21 @@ input[type='checkbox'] {
     margin-top: 0;
 }
 
+.business {
+    display: flex;
+}
+
+.business__right-side {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.business__left-side {
+    width: 70%;
+    margin-right: 30px;
+}
+
 @keyframes rotating {
   from {
     -webkit-transform: rotate(0deg);
@@ -644,6 +659,18 @@ input[type='checkbox'] {
         margin: 0;
         padding-left: 0;
         padding-right: 0;
+    }
+
+    .business {
+        flex-direction: column;
+    }
+
+    .business__left-side {
+        width: 100%;
+    }
+
+    .main-title {
+        margin-top: 8vw;
     }
 
     .header__menu__item:hover > .submenu {
@@ -795,6 +822,7 @@ input[type='checkbox'] {
 
     .main-title {
         font-size: 24px;
+        margin-top: 100px;
     }
 
     .content {
