@@ -277,6 +277,11 @@ main {
     color: #5B5E6D;
 }
 
+.link {
+    font-family: 'Inter';
+    color: #909090;
+}
+
 .card {
     background: #0D2336;
     color: white;
